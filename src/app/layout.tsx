@@ -20,6 +20,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         {children}
+        <div className="bg-white fixed left-8 top-40 z-10 w-[9%] h-[800px] hidden sm:inline">광고 사이드 배너</div>
+        <div className="bg-white fixed right-8 top-40 z-10 w-[9%] h-[800px] hidden sm:inline">광고 사이드 배너</div>
       </body>
     </html>
   );

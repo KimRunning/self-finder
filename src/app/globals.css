@@ -19,10 +19,35 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: white;
+  overflow: hidden;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* 스크롤바 숨기기 - 웹킷 기반 브라우저 (Chrome, Safari, Edge 등) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* 스크롤바 숨기기 - Firefox */
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE와 Edge */
+}
+
+/* 스크롤바 숨기기 - IE와 Edge */
+body {
+  -ms-overflow-style: none; /* IE와 Edge */
+}
+
+/* 스크롤바 숨기기 - Android 및 iOS 브라우저 */
+html,
+body {
+  overflow: -moz-scrollbars-none; /* Firefox on Android */
+  -ms-overflow-style: none; /* IE와 Edge */
+  scrollbar-width: none; /* Firefox */
 }
